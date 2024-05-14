@@ -1,0 +1,33 @@
+.account {
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include tablet {
+        gap: 12px;
+    }
+
+    a {
+        display: inline-block; // тк ссылка не полностью перекрывает svg, из-за чего при наведении фон окрашивался не полностью
+        transition: all 0.2s ease-in;
+    }
+    
+    a:hover {
+        background: var(--neutral-grayededed);
+    }
+}
+
+.account--search {
+    @include mobile {
+        display: none;
+    }
+}
+
+.account--menu {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
